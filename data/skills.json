@@ -1,0 +1,62 @@
+{
+  "_instructions": "Organize your skills with vibrant colors.",
+  "sectionTitle": "Skills & Technologies",
+  "categories": [
+    {
+      "category": "Programming Languages",
+      "icon": "fas fa-code",
+      "color": "#FF6B6B",
+      "skills": [
+        "SQL",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "VBA"
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "icon": "fas fa-toolbox",
+      "color": "#4ECDC4",
+      "skills": [
+        "Agile",
+        "Waterfall",
+        "Lean Six Sigma (Green Belt)"
+      ]
+    },
+    {
+      "category": "Tools & Platforms",
+      "icon": "fas fa-wrench",
+      "color": "#FFE66D",
+      "skills": [
+        "Procore",
+        "Bluebeam",
+        "MS Project",
+        "Excel",
+        "PivotTables",
+        "Solver",
+        "Power BI",
+        "Tableau",
+        "SAP/ERP Systems"
+      ]
+    },
+    {
+      "category": "Technical Skills",
+      "icon": "fas fa-laptop-code",
+      "color": "#A8DADC",
+      "skills": [
+        "Project Management",
+        "Risk Assessment",
+        "Scheduling",
+        "Stakeholder Management",
+        "Demand Forecasting",
+        "Inventory Optimization (EOQ)",
+        "Supplier Management",
+        "Procurement",
+        "Logistics",
+        "Sustainability Initiatives",
+        "Data & Analytics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "_instructions": "Add your education and certifications here.",
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
+  "education": [
+    {
+      "degree": "Master of Science",
+      "school": "California State University, Northridge",
+      "institution": "California State University, Northridge",
+      "period": "January 2024 – May 2025",
+      "details": "",
+      "description": ""
+    },
+    {
+      "degree": "Bachelor of Engineering",
+      "school": "Visvesvaraya Technological University",
+      "institution": "Visvesvaraya Technological University",
+      "period": "August 2019 – August 2023",
+      "details": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Project Management Professional (PMP)",
+      "name": "Project Management Professional (PMP)",
+      "issuer": "Project Management Institute",
+      "date": "",
+      "icon": "fas fa-certificate"
+    },
+    {
+      "title": "Lean Six Sigma Green Belt",
+      "name": "Lean Six Sigma Green Belt",
+      "issuer": "California State University, Northridge",
+      "date": "",
+      "icon": "fas fa-certificate"
+    }
+  ]
+}

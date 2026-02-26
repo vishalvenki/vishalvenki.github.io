@@ -1,0 +1,26 @@
+{
+  "_instructions": "Site-wide configuration and meta tags.",
+  "title": "VISHAL SREERAMAREDDY | Supply Chain & Operations Professional",
+  "description": "VISHAL SREERAMAREDDY - Supply Chain & Operations Professional | Portfolio",
+  "keywords": "Supply Chain & Operations Professional, Portfolio, VISHAL SREERAMAREDDY",
+  "author": "VISHAL SREERAMAREDDY",
+  "siteName": "VISHAL SREERAMAREDDY",
+  "siteTitle": "VISHAL SREERAMAREDDY | Supply Chain & Operations Professional",
+  "meta": {
+    "title": "VISHAL SREERAMAREDDY | Supply Chain & Operations Professional",
+    "description": "VISHAL SREERAMAREDDY - Supply Chain & Operations Professional | Portfolio",
+    "author": "VISHAL SREERAMAREDDY",
+    "keywords": "Supply Chain & Operations Professional, Portfolio, VISHAL SREERAMAREDDY"
+  },
+  "branding": {
+    "name": "VISHAL SREERAMAREDDY",
+    "tagline": "Supply Chain & Operations Professional",
+    "logo": "/logo.png"
+  },
+  "settings": {
+    "year": 2026,
+    "enableAnimations": true,
+    "enableParticles": true,
+    "navbarScrollEffect": true
+  }
+}

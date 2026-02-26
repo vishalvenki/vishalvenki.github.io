@@ -1,0 +1,41 @@
+{
+  "_instructions": "About section.",
+  "sectionTitle": "About Me",
+  "image": "assets/images/profile.jpg",
+  "paragraphs": [
+    "Supply Chain & Operations Professional with 2+ years of experience in project management, supplier coordination, and data-driven process optimization.",
+    "PMP Certified and Lean Six Sigma Green Belt with proven expertise in ERP systems, advanced analytics (SQL, Power BI, Tableau), and cross-functional team leadership.",
+    "Track record of improving fulfillment efficiency by 18%, maintaining on-time delivery rates above 95%, and achieving 98% inventory accuracy across manufacturing and construction environments."
+  ],
+  "statistics": [
+    {
+      "icon": "fas fa-project-diagram",
+      "value": "9+",
+      "label": "Projects Completed",
+      "color": "#FF6B6B"
+    },
+    {
+      "icon": "fas fa-briefcase",
+      "value": "3+",
+      "label": "Years Experience",
+      "color": "#4ECDC4"
+    },
+    {
+      "icon": "fas fa-code",
+      "value": "28+",
+      "label": "Technologies",
+      "color": "#FFE66D"
+    },
+    {
+      "icon": "fas fa-award",
+      "value": "2+",
+      "label": "Certifications",
+      "color": "#A8DADC"
+    }
+  ],
+  "downloadCV": {
+    "text": "Download Resume",
+    "href": "assets/files/resume.pdf",
+    "icon": "fas fa-download"
+  }
+}

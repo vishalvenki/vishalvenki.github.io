@@ -1,0 +1,221 @@
+{
+  "_instructions": "Add your projects.",
+  "sectionTitle": "Featured Work",
+  "projects": [
+    {
+      "title": "Inventory Optimization Using EOQ & Demand Forecasting",
+      "description": "Built demand forecasting models in Python and Excel for 50+ SKUs, optimizing Economic Order Quantity (EOQ) and reorder point calculations to improve replenishment accuracy. Decreased excess inventory by 22%, improved inventory turnover by 15%, and saved $8K annually in carrying costs.",
+      "longDescription": "Built demand forecasting models in Python and Excel for 50+ SKUs, optimizing Economic Order Quantity (EOQ) and reorder point calculations to improve replenishment accuracy. Decreased excess inventory by 22%, improved inventory turnover by 15%, and saved $8K annually in carrying costs.",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "Excel"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF6B6B",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": true,
+      "github": "",
+      "demo": "",
+      "links": {
+        "github": "",
+        "demo": "",
+        "live": ""
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "Workflow Inspection & Defect Analysis System",
+      "description": "Designed inspection workflows with root cause analysis frameworks (5 Whys, Fishbone) across 3 production lines, standardizing quality control procedures. Lowered quality escapes by 30% and decreased customer complaints by 20%.",
+      "longDescription": "Designed inspection workflows with root cause analysis frameworks (5 Whys, Fishbone) across 3 production lines, standardizing quality control procedures. Lowered quality escapes by 30% and decreased customer complaints by 20%.",
+      "category": "Software Development",
+      "technologies": [
+        "5 Whys",
+        "Fishbone",
+        "ISO 9001"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#4ECDC4",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "",
+      "demo": "",
+      "links": {
+        "github": "",
+        "demo": "",
+        "live": ""
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "Ledger Automation System",
+      "description": "Streamlined financial reporting using Python and Excel VBA, processing 5,000+ records and slashing report generation time from 4 hours to 15 minutes (94% improvement).",
+      "longDescription": "Streamlined financial reporting using Python and Excel VBA, processing 5,000+ records and slashing report generation time from 4 hours to 15 minutes (94% improvement).",
+      "category": "Backend Development",
+      "technologies": [
+        "Python",
+        "Excel VBA"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FFE66D",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "",
+      "demo": "",
+      "links": {
+        "github": "",
+        "demo": "",
+        "live": ""
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "Supply Chain Analytics Dashboard",
+      "description": "Developed Power BI dashboard integrating ERP data to track 12 supply chain KPIs including on-time delivery, inventory turnover, and supplier lead time.",
+      "longDescription": "Developed Power BI dashboard integrating ERP data to track 12 supply chain KPIs including on-time delivery, inventory turnover, and supplier lead time.",
+      "category": "Software Development",
+      "technologies": [
+        "Power BI",
+        "ERP"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#A8DADC",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "",
+      "demo": "",
+      "links": {
+        "github": "",
+        "demo": "",
+        "live": ""
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "supply-chain-dashboard",
+      "description": "Portfolio project showcasing development capabilities",
+      "longDescription": "Portfolio project showcasing development capabilities",
+      "category": "Backend Development",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#B19CD9",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "https://github.com/vishalvenki/supply-chain-dashboard",
+      "demo": "https://github.com/vishalvenki/supply-chain-dashboard",
+      "links": {
+        "github": "https://github.com/vishalvenki/supply-chain-dashboard",
+        "demo": "https://github.com/vishalvenki/supply-chain-dashboard",
+        "live": "https://github.com/vishalvenki/supply-chain-dashboard"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "generating-synthetic-data-using-gans",
+      "description": "Educational project for mastering software architecture",
+      "longDescription": "Educational project for mastering software architecture",
+      "category": "Software Development",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF8B94",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "https://github.com/vishalvenki/generating-synthetic-data-using-gans",
+      "demo": "https://github.com/vishalvenki/generating-synthetic-data-using-gans",
+      "links": {
+        "github": "https://github.com/vishalvenki/generating-synthetic-data-using-gans",
+        "demo": "https://github.com/vishalvenki/generating-synthetic-data-using-gans",
+        "live": "https://github.com/vishalvenki/generating-synthetic-data-using-gans"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "power-bi-mastery-dynamic-dashboards-advanced-dax",
+      "description": "Educational project for mastering software architecture",
+      "longDescription": "Educational project for mastering software architecture",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#FF6B6B",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "https://github.com/vishalvenki/power-bi-mastery-dynamic-dashboards-advanced-dax",
+      "demo": "https://github.com/vishalvenki/power-bi-mastery-dynamic-dashboards-advanced-dax",
+      "links": {
+        "github": "https://github.com/vishalvenki/power-bi-mastery-dynamic-dashboards-advanced-dax",
+        "demo": "https://github.com/vishalvenki/power-bi-mastery-dynamic-dashboards-advanced-dax",
+        "live": "https://github.com/vishalvenki/power-bi-mastery-dynamic-dashboards-advanced-dax"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "supply-chain-analytics",
+      "description": "Practice application demonstrating full-stack development skills",
+      "longDescription": "Practice application demonstrating full-stack development skills",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#4ECDC4",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "https://github.com/vishalvenki/supply-chain-analytics",
+      "demo": "https://github.com/vishalvenki/supply-chain-analytics",
+      "links": {
+        "github": "https://github.com/vishalvenki/supply-chain-analytics",
+        "demo": "https://github.com/vishalvenki/supply-chain-analytics",
+        "live": "https://github.com/vishalvenki/supply-chain-analytics"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    },
+    {
+      "title": "dashboards-development-using-tableau-and-powerbi",
+      "description": "Educational project for mastering software architecture",
+      "longDescription": "Educational project for mastering software architecture",
+      "category": "Development",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "color": "#FFE66D",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&q=80&fit=crop",
+      "featured": false,
+      "github": "https://github.com/vishalvenki/dashboards-development-using-tableau-and-powerbi",
+      "demo": "https://github.com/vishalvenki/dashboards-development-using-tableau-and-powerbi",
+      "links": {
+        "github": "https://github.com/vishalvenki/dashboards-development-using-tableau-and-powerbi",
+        "demo": "https://github.com/vishalvenki/dashboards-development-using-tableau-and-powerbi",
+        "live": "https://github.com/vishalvenki/dashboards-development-using-tableau-and-powerbi"
+      },
+      "stats": {
+        "status": "Completed",
+        "year": "2026"
+      }
+    }
+  ]
+}
