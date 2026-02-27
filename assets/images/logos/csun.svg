@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="16" fill="#CF0A2C"/>
+  <circle cx="60" cy="52" r="30" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <text x="60" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">CSUN</text>
+  <text x="60" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-weight="500" font-size="8" fill="#FFFFFF" opacity="0.9">CAL STATE NORTHRIDGE</text>
+</svg>
