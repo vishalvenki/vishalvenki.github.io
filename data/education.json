@@ -8,6 +8,8 @@
       "school": "California State University, Northridge",
       "institution": "California State University, Northridge",
       "logo": "assets/images/logos/csun.svg",
+      "icon": "fas fa-graduation-cap",
+      "color": "#CF0A2C",
       "period": "January 2024 – May 2025",
       "details": "",
       "description": ""
@@ -17,6 +19,8 @@
       "school": "Visvesvaraya Technological University",
       "institution": "Visvesvaraya Technological University",
       "logo": "assets/images/logos/vtu.svg",
+      "icon": "fas fa-university",
+      "color": "#1a5276",
       "period": "August 2019 – August 2023",
       "details": "",
       "description": ""
@@ -28,14 +32,16 @@
       "name": "Project Management Professional (PMP)",
       "issuer": "Project Management Institute",
       "date": "",
-      "icon": "fas fa-certificate"
+      "icon": "fas fa-certificate",
+      "color": "#FFE66D"
     },
     {
       "title": "Lean Six Sigma Green Belt",
       "name": "Lean Six Sigma Green Belt",
       "issuer": "California State University, Northridge",
       "date": "",
-      "icon": "fas fa-certificate"
+      "icon": "fas fa-certificate",
+      "color": "#4ECDC4"
     }
   ]
 }
