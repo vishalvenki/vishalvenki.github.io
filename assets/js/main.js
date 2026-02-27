@@ -33,6 +33,8 @@ async function initializeApp() {
         initializeScrollEffects();
         initializeScrollReveal();
         initializeBackToTop();
+        initializeScrollProgress();
+        initializeOrbParallax();
 
         console.log('Portfolio loaded successfully!');
     } catch (error) {
@@ -101,7 +103,16 @@ async function loadHero() {
         // Set text content
         document.getElementById('hero-greeting').textContent = data.greeting;
         document.getElementById('hero-name').innerHTML = `${data.name.split(' ')[0]} <span>${data.name.split(' ').slice(1).join(' ')}</span>`;
-        document.getElementById('hero-title').textContent = data.title;
+
+        // Set up typing effect if typingTexts exist
+        const heroTitle = document.getElementById('hero-title');
+        if (data.typingTexts && data.typingTexts.length > 0) {
+            heroTitle.innerHTML = '<span class="typing-text"></span><span class="typing-cursor"></span>';
+            initializeTypingEffect(heroTitle.querySelector('.typing-text'), data.typingTexts);
+        } else {
+            heroTitle.textContent = data.title;
+        }
+
         document.getElementById('hero-tagline').textContent = data.tagline;
         document.getElementById('hero-summary').textContent = data.summary;
 
@@ -151,6 +162,45 @@ async function loadHero() {
 }
 
 // ============================================
+// Typing Effect
+// ============================================
+function initializeTypingEffect(element, texts) {
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 80;
+    const deletingSpeed = 40;
+    const pauseDuration = 2000;
+
+    function type() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+            element.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let timeout = isDeleting ? deletingSpeed : typingSpeed;
+
+        if (!isDeleting && charIndex === currentText.length) {
+            timeout = pauseDuration;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            timeout = 400;
+        }
+
+        setTimeout(type, timeout);
+    }
+
+    type();
+}
+
+// ============================================
 // Load About Section
 // ============================================
 async function loadAbout() {
@@ -160,6 +210,16 @@ async function loadAbout() {
 
         // Set section title
         document.getElementById('about-title').textContent = data.sectionTitle;
+
+        // Render profile image
+        const imageContainer = document.getElementById('about-image');
+        if (imageContainer && data.image) {
+            imageContainer.innerHTML = `
+                <div class="profile-image-wrapper">
+                    <img src="${data.image}" alt="Profile Photo" class="profile-image" />
+                </div>
+            `;
+        }
 
         // Render paragraphs
         const textContainer = document.getElementById('about-text');
@@ -175,10 +235,13 @@ async function loadAbout() {
             statsContainer.innerHTML = data.statistics.map(stat => `
                 <div class="stat-card">
                     <i class="${stat.icon}" style="color: ${stat.color}"></i>
-                    <span class="stat-value">${stat.value}</span>
+                    <span class="stat-value" data-target="${stat.value}">${stat.value}</span>
                     <span class="stat-label">${stat.label}</span>
                 </div>
             `).join('');
+
+            // Initialize counter animation
+            initializeCounters();
         }
 
         // Render download CV button
@@ -194,6 +257,52 @@ async function loadAbout() {
     } catch (error) {
         console.error('Error loading about section:', error);
     }
+}
+
+// ============================================
+// Animated Stat Counters
+// ============================================
+function initializeCounters() {
+    const statValues = document.querySelectorAll('.stat-value[data-target]');
+    let countersAnimated = false;
+
+    function animateCounters() {
+        if (countersAnimated) return;
+
+        const statsSection = document.querySelector('.about-stats');
+        if (!statsSection) return;
+
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            countersAnimated = true;
+
+            statValues.forEach(el => {
+                const target = el.getAttribute('data-target');
+                const numericPart = parseInt(target);
+                const suffix = target.replace(/\d/g, '');
+
+                if (isNaN(numericPart)) return;
+
+                let current = 0;
+                const duration = 1500;
+                const increment = numericPart / (duration / 16);
+
+                el.textContent = '0' + suffix;
+
+                const counter = setInterval(() => {
+                    current += increment;
+                    if (current >= numericPart) {
+                        current = numericPart;
+                        clearInterval(counter);
+                    }
+                    el.textContent = Math.floor(current) + suffix;
+                }, 16);
+            });
+        }
+    }
+
+    window.addEventListener('scroll', animateCounters);
+    animateCounters(); // Check on init
 }
 
 // ============================================
@@ -218,14 +327,17 @@ async function loadExperience() {
                     </div>
                     <div class="timeline-content">
                         <div class="experience-header">
+                            ${exp.logo ? `
+                                <img src="${exp.logo}" alt="${exp.company}" class="company-logo" />
+                            ` : ''}
                             <h3 class="experience-title">${exp.title}</h3>
                             <p class="experience-company">
-                                ${exp.company} ${exp.location ? `• ${exp.location}` : ''}
+                                ${exp.company} ${exp.location ? `&bull; ${exp.location}` : ''}
                             </p>
                             <p class="experience-period">
                                 <i class="fas fa-calendar-alt"></i>
                                 ${exp.period}
-                                ${exp.type ? `<span class="experience-type">• ${exp.type}</span>` : ''}
+                                ${exp.type ? `<span class="experience-type">&bull; ${exp.type}</span>` : ''}
                             </p>
                         </div>
                         <p class="experience-description">${exp.description}</p>
@@ -262,6 +374,7 @@ async function loadSkills() {
         // Render skill categories
         const skillsGrid = document.getElementById('skills-grid');
         if (skillsGrid && data.categories) {
+            skillsGrid.classList.add('reveal-stagger');
             skillsGrid.innerHTML = data.categories.map(category => `
                 <div class="skill-category">
                     <div class="skill-category-header">
@@ -295,6 +408,7 @@ async function loadProjects() {
         // Render projects
         const projectsGrid = document.getElementById('projects-grid');
         if (projectsGrid && data.projects) {
+            projectsGrid.classList.add('reveal-stagger');
             projectsGrid.innerHTML = data.projects.map(project => `
                 <div class="project-card">
                     <div class="project-icon" style="background: ${project.color}">
@@ -359,9 +473,13 @@ async function loadEducation() {
         if (educationGrid && data.education) {
             educationGrid.innerHTML = data.education.map(edu => `
                 <div class="education-card">
-                    <div class="education-icon" style="background: ${edu.color}20; color: ${edu.color}">
-                        <i class="${edu.icon}"></i>
-                    </div>
+                    ${edu.logo ? `
+                        <img src="${edu.logo}" alt="${edu.institution}" class="university-logo" />
+                    ` : `
+                        <div class="education-icon" style="background: ${edu.color}20; color: ${edu.color}">
+                            <i class="${edu.icon}"></i>
+                        </div>
+                    `}
                     <h3 class="education-degree">${edu.degree}</h3>
                     <p class="education-institution">${edu.institution}</p>
                     <p class="education-period">${edu.period}</p>
@@ -381,6 +499,7 @@ async function loadEducation() {
         // Render certifications
         const certificationsGrid = document.getElementById('certifications-grid');
         if (certificationsGrid && data.certifications) {
+            certificationsGrid.classList.add('reveal-stagger');
             certificationsGrid.innerHTML = data.certifications.map(cert => `
                 <div class="certification-card">
                     <div class="certification-icon" style="color: ${cert.color}">
@@ -677,6 +796,39 @@ function initializeBackToTop() {
             });
         });
     }
+}
+
+// ============================================
+// Scroll Progress Bar
+// ============================================
+function initializeScrollProgress() {
+    const progressBar = document.getElementById('scroll-progress');
+    if (!progressBar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+}
+
+// ============================================
+// Orb Parallax on Mouse Move
+// ============================================
+function initializeOrbParallax() {
+    const orbs = document.querySelectorAll('.gradient-orb');
+    if (orbs.length === 0) return;
+
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 2;
+        const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+        orbs.forEach((orb, index) => {
+            const speed = (index + 1) * 15;
+            orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+    });
 }
 
 // ============================================

@@ -3,9 +3,15 @@
   "greeting": "Hi, I'm",
   "name": "VISHAL SREERAMAREDDY",
   "title": "Supply Chain & Operations Professional",
+  "typingTexts": [
+    "Supply Chain & Operations Professional",
+    "PMP Certified Project Manager",
+    "Data-Driven Decision Maker",
+    "Lean Six Sigma Green Belt"
+  ],
   "summary": "Supply Chain & Operations Professional with 3+ years of experience specializing in SQL, Python, Pandas.",
   "avatarUrl": "/avatar.png",
-  "tagline": "Supply Chain & Operations Professional",
+  "tagline": "Transforming Supply Chains with Data & Technology",
   "highlights": [
     {
       "icon": "fas fa-briefcase",

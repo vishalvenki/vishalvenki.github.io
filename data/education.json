@@ -7,6 +7,7 @@
       "degree": "Master of Science",
       "school": "California State University, Northridge",
       "institution": "California State University, Northridge",
+      "logo": "assets/images/logos/csun.svg",
       "period": "January 2024 – May 2025",
       "details": "",
       "description": ""
@@ -15,6 +16,7 @@
       "degree": "Bachelor of Engineering",
       "school": "Visvesvaraya Technological University",
       "institution": "Visvesvaraya Technological University",
+      "logo": "assets/images/logos/vtu.svg",
       "period": "August 2019 – August 2023",
       "details": "",
       "description": ""
